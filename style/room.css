@@ -1,0 +1,146 @@
+.content {
+    max-width: min(112rem, 90%);
+}
+
+#room header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#room header .buttons {
+    display: flex;
+}
+
+#room header .buttons .button:nth-child(1) {
+    margin-right: 0.8rem;
+    padding: 1.3rem 1.6rem;
+}
+
+#room header .buttons .button:nth-child(1) img {
+    margin: 0 0 0 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+#room header .buttons .button:nth-child(2) {
+    padding: 1.3rem 3.2rem;
+}
+
+#room header .buttons .button:nth-child(2) img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Section questionForm */
+#questionForm h2 {
+    font-family: var(--tittleFont);
+    font-size: 2.8rem;
+    color: var(--black);
+    font-weight: 700;
+
+    margin-bottom: 2.4rem;
+    line-height: 4.2rem;
+}
+
+#questionForm form {
+    border: 0.2rem solid var(--blue-grey);
+    padding: 1.6rem;
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    margin-bottom: 1.6rem;
+}
+
+#questionForm textarea {
+    resize: none;
+    background: none;
+    width: 100%;
+    outline: none;
+}
+
+#questionForm form textarea::placeholder {
+    color: var(--blue-grey);
+}
+
+#questionForm form footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#questionForm form footer > div {
+    display: flex;
+    align-items: center;
+    color: var(--icons-details);
+    font-family: var(--tittleFont);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#questionForm form footer img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.9rem;
+}
+
+#questionForm form footer button {
+    height: auto;
+    padding: 0.8rem 2.4rem;
+    line-height: 2.4rem;
+}
+
+/* Section questions */
+.questionWrapper {
+    background: var(--light-blue);
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    padding: 2.4rem 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.questionWrapper .questionContent {
+    display: flex;
+    align-items: flex-start;
+}
+
+.questionWrapper .questionContent .user {
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+.questionWrapper .questionContent p {
+    margin-left: 1.6rem;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5.5rem;
+}
+
+.questionWrapper .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.questionWrapper .actions > a {
+    display: flex;
+}
+
+.questionWrapper .actions > a:nth-child(2) {
+    margin-left: 2.4rem;
+}
+
+.questionWrapper .actions > a > img {
+    margin-right: 0.8rem;
+}
+
+/* Question Read */
+
+.questionWrapper.read {
+    background: var(--grey-read);
+}
+
+.questionWrapper.read .questionContent .user {
+    background: var(--blue-grey);
+}
