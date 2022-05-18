@@ -1,0 +1,24 @@
+{
+    "name": "rocketq",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tainmat/rocketQ.git"
+    },
+    "keywords": [],
+    "author": "Tainã Pino",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Tainmat/rocketQ/issues"
+    },
+    "homepage": "https://github.com/Tainmat/rocketQ#readme",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.1"
+    }
+}
