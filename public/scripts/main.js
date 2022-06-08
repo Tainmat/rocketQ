@@ -11,6 +11,14 @@ const checkButton = document.querySelectorAll('.actions a.check'); //Get all but
 
 function handleClick(e, check = true) {
     e.preventDefault();
+
+    const form = document.querySelector('.modal form');
+    const roomId = document.getElementById('room-id').dataset.id;
+    const action = check ? 'check' : 'delete';
+    const questionId = e.target.dataset.id;
+
+    form.setAttribute('action', `/room/${roomId}/${questionId}/${action}`);
+
     modalTitle.innerHTML = check ? 'Marcar como lida' : 'Excluir essa pergunta';
     modalDescription.innerHTML = check
         ? 'Tem certeza que deseja marcar como lida esta pergunta?'
