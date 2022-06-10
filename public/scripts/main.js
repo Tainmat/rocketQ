@@ -17,7 +17,7 @@ function handleClick(e, check = true) {
     const action = check ? 'check' : 'delete';
     const questionId = e.target.dataset.id;
 
-    form.setAttribute('action', `/room/${roomId}/${questionId}/${action}`);
+    form.setAttribute('action', `/question/${roomId}/${questionId}/${action}`);
 
     modalTitle.innerHTML = check ? 'Marcar como lida' : 'Excluir essa pergunta';
     modalDescription.innerHTML = check
