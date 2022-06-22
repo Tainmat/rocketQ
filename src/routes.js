@@ -11,9 +11,7 @@ route.get('/create-pass', (req, res) => {
     res.render('index', { page: 'create-pass' });
 });
 
-route.get('/room/:roomId', (req, res) => {
-    res.render('room');
-});
+route.get('/room/:roomId', RoomController.open);
 
 route.post('/question/:room/:question/:action', QuestionController.index);
 route.post('/create-room', RoomController.create);
