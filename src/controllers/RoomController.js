@@ -19,17 +19,18 @@ module.exports = {
             );
 
             isRoom = RoomExistId[0]['COUNT(id)'];
+        }
 
-            /* Inseri sala no banco */
-            if (isRoom === 0)
-                await db.run(`INSERT INTO tb_room (
+        /* Inseri sala no banco */
+        await db.run(`INSERT INTO tb_room (
                 id,
-                pass
+                pass,
+                in_stat
             ) VALUES (
                 ${parseInt(roomId)},
-                ${pass}
+                ${pass},
+                1
             )`);
-        }
 
         await db.close();
 

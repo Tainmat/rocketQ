@@ -5,14 +5,17 @@ const initDb = {
         const db = await Database();
 
         await db.exec(`CREATE TABLE tb_room (
-          id INTEGER PRIMARY KEY,
-          pass TEXT
+          id INTEGER NOT NULL PRIMARY KEY,
+          pass TEXT NOT NULL,
+          in_stat BIT NOT NULL
         )`);
 
         await db.exec(`CREATE TABLE tb_ques (
           id INTEGER PRIMARY KEY AUTOINCREMENT,
           ds_ques TEXT NOT NULL,
-          in_chec INT
+          id_room INT NOT NULL REFERENCES tb_room(id) on DELETE CASCADE,
+          in_chec BIT NOT NULL,
+          in_stat BIT NOT NULL 
         )`);
 
         await db.close();
