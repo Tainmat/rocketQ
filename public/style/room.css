@@ -141,6 +141,10 @@
     background: var(--grey-read);
 }
 
+.questionWrapper.read.actions.check {
+    visibility: 0;
+}
+
 .questionWrapper.read .questionContent .user {
     background: var(--blue-grey);
 }

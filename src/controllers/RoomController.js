@@ -37,8 +37,13 @@ module.exports = {
         res.redirect(`/room/${roomId}`);
     },
 
-    open(req, res) {
+    async open(req, res) {
+        const db = await Database();
         const roomIdActive = req.params.roomId;
-        res.render('room', { roomId: roomIdActive });
+        const questions = await db.all(
+            `SELECT * FROM tb_ques WHERE id_room = ${roomIdActive} and in_stat = 1 ORDER BY in_chec ASC, id DESC `,
+        );
+
+        res.render('room', { roomId: roomIdActive, questions: questions });
     },
 };

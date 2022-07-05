@@ -14,10 +14,10 @@ function handleClick(e, check = true) {
 
     const form = document.querySelector('.modal form');
     const roomId = document.getElementById('room-id').dataset.id;
-    const action = check ? 'check' : 'delete';
+    const slug = check ? 'check' : 'delete';
     const questionId = e.target.dataset.id;
 
-    form.setAttribute('action', `/question/${roomId}/${questionId}/${action}`);
+    form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`);
 
     modalTitle.innerHTML = check ? 'Marcar como lida' : 'Excluir essa pergunta';
     modalDescription.innerHTML = check
