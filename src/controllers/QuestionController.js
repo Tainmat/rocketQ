@@ -23,9 +23,10 @@ module.exports = {
                     `UPDATE TB_QUES SET in_chec = 1 WHERE id_room = ${roomId} and id = ${questionId}`,
                 );
             }
+            res.redirect(`/room/${roomId}`);
+        } else {
+            res.render('passIncorrect', { roomId: roomId });
         }
-
-        res.redirect(`/room/${roomId}`);
     },
 
     async create(req, res) {
