@@ -36,7 +36,7 @@
                             alt="copiar número da sala"
                         />
                     </div>
-                    <a class="button" href="#">
+                    <a class="button" href="/create-pass">
                         <img
                             src="/images/usersWhite.svg"
                             alt="criar uma sala"
@@ -74,8 +74,11 @@
 
                 <section id="questions">
                     <h2 class="sr-only">Perguntas da comunidade</h2>
-
                     <div class="questions">
+
+                        <% if(isNoQuestions){ %>
+                            <%- include('parts/no-question') %>
+                        <% } %>
 
                         <% questions.forEach(question => { %>
 
