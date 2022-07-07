@@ -56,6 +56,7 @@ module.exports = {
         });
     },
 
+    //I still need to create validate function in DB roomExists
     async enter(req, res) {
         const db = await Database();
         const roomId = req.body.roomId;

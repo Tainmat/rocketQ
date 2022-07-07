@@ -144,3 +144,30 @@
 .questionWrapper.read .questionContent .user {
     background: var(--blue-grey);
 }
+
+/* No Questions */
+.noQuestions{
+   text-align: center; 
+   margin-top: 5.2rem;
+}
+
+.noQuestions p:nth-child(2){
+    font-family: var(--tittleFont);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black)
+}
+
+.noQuestions img{
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.noQuestions p:nth-child(3){ 
+    font-family: var(--textFont);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 1.3rem;
+    color: var(--dark-grey);
+    line-height: 1.9rem;
+}
